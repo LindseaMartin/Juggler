@@ -1,8 +1,7 @@
 async function getToDos() {
-  const url = "/.netlify/functions/todos";
-  const res = await fetch(url);
+  const res = await fetch('/.netlify/functions/todos');
   const data = await res.json();
-  document.querySelector("p").textContent = data.path;
+  console.log(data);
 }
 
 getToDos();
